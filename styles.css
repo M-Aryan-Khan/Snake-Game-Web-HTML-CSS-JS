@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background: url("../img/snakeBg.png"); 
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#scoreBox{
+    text-align: center;
+    position: absolute;
+    background-color: rgba(208,178,139, 0.85);
+    border: 2px solid black;
+    border-radius: 10px;
+    top: 60px;
+    right: 90px;
+    font-size: 39px;
+    width: 30vmin;
+    font-weight: bold;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+#hiscoreBox{
+    text-align: center;
+    position: absolute;
+    background-color: rgba(208,178,139, 0.85);
+    border: 2px solid black;
+    border-radius: 10px;
+    top: 120px;
+    right: 80px;
+    width: 32vmin;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+#scoring-system{
+    text-align: center;
+    position: absolute;
+    background-color: rgba(208,178,139, 0.85);
+    border: 2px solid black;
+    border-radius: 10px;
+    top: 215px;
+    right: 80px;
+    width: 32vmin;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+#scoring-system-div{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#scoring-system-div-img{
+    height: 50px;
+}
+
+#easy,#medium,#hard{
+    position: absolute;
+    background-color: rgba(208,178,139, 0.85);
+    border: 2px solid black;
+    border-radius: 10px;
+    right: 110px;
+    font-size: 39px;
+    width: 25vmin;
+    font-weight: bold;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+#easy{
+    top: 500px;
+}
+#medium{
+    top: 560px;
+}
+#hard{
+    top: 620px;
+}
+
+#easy:hover,#medium:hover,#hard:hover{
+    background-color: rgba(199, 132, 45, 0.85);
+}
+
+#board{
+    margin-right: 300px;;
+    background-color: rgba(208,178,139, 0.85);
+    width: 150vmin;
+    height: 92vmin;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(28, 1fr);
+}
+
+.head{
+    border: none;
+    transform: scale(1.02);
+    border-radius: 9px;
+    background-image: url("./img/face-up.png");
+    background-size: cover;
+}
+
+.snake{
+    background: linear-gradient(135deg, #00FF00, #008000);
+    border: none;
+}
+
+.up{
+    background-image: url("./img/face-up.png");
+    background-size: cover
+}
+.down{
+    background-image: url("./img/face-down.png");
+    background-size: cover;
+}
+.left{
+    background-image: url("./img/face-left.png");
+    background-size: cover;
+}
+.right{
+    background-image: url("./img/face-right.png");
+    background-size: cover;
+}
+.apple{
+    background-image: url("./img/apple.png");
+    background-size: cover;
+}
+.watermelon{
+    background-image: url("./img/watermelon.png");
+    background-size: cover;
+}
+.mouse{
+    background-image: url("./img/mouse.png");
+    background-size: cover;
+}
+#popup {
+    font-family: 'Pixelify Sans', sans-serif;
+    position: fixed;
+    background: none;
+    top: 45%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    font-size : 24px;
+    text-align : center;
+    margin-top : 50px;
+    color : red;
+    animation: popUpAnimation 3s ease-out;
+}
+
+@keyframes popUpAnimation {
+    0% { transform: translate(-50%, -50%) scale(0); }
+    100% { transform: translate(-50%, -50%) scale(6); }
+}
